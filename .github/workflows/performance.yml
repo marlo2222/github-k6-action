@@ -52,21 +52,4 @@ jobs:
         with:
           path: |
             ./script.js
-
-  k6 performance-test-flags:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: grafana/run-k6-action@v1
-        env:
-          K6_CLOUD_TOKEN: ${{ secrets.K6_CLOUD_TOKEN }}
-          K6_CLOUD_PROJECT_ID: ${{ secrets.K6_CLOUD_PROJECT_ID }}
-          URL: www.example.com
-        with:
-          path: |
-            ./script.js
-        flags: --vu 10 --duration 30s --http-debug
-        debug: true
-        only-verify-scripts: true
-        fail-fast: true
   
