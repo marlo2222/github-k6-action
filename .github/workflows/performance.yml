@@ -43,10 +43,9 @@ jobs:
   k6-performance-test-intermediario:
     runs-on: ubuntu-latest
     steps:
-      - name: step 1 - run test
-        uses: actions/checkout@v2
-        uses: grafana/setup-k6-action@v1
-        uses: grafana/run-k6-action@v1
+      - uses: actions/checkout@v2
+      - uses: grafana/setup-k6-action@v1
+      - uses: grafana/run-k6-action@v1
         env:
           K6_CLOUD_TOKEN: ${{ secrets.K6_CLOUD_TOKEN }}
           K6_CLOUD_PROJECT_ID: ${{ secrets.K6_CLOUD_PROJECT_ID }}
