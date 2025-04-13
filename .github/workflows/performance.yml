@@ -22,7 +22,7 @@ jobs:
           path: |
             ./script.js
 
-  k6-performance-test-maual:
+  k6-performance-test-manual:
     runs-on: ubuntu-latest
     steps:
       - name: step 1 - checkout
@@ -40,7 +40,7 @@ jobs:
           ls -la
 
 
-  k6 performance-test-intermediario:
+  k6-performance-test-intermediario:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
